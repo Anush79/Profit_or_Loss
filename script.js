@@ -1,3 +1,4 @@
+var input = document.querySelectorAll("input");
 var initial = document.querySelector(".initial");
 var quantity = document.querySelector(".quantity");
 var current = document.querySelector(".current");
@@ -19,11 +20,12 @@ function calculatePL(init, quant, curr) {
     if (curr > init) {
         //profit
         var profit = (curr - init) * quant;
-        var percentage = (profit / (init*quant)) * 100;
+        var percentage = (profit / (init * quant)) * 100;
         showMsg(`Great Job🥳🎉, You have chosen the right Stock💹 \nPROFIT = ${profit} \nPROFIT PERCENTAGE= ${percentage.toFixed(2)}%`);
         profitsound.play();
         success.play();
-
+        hero.style.rotate="297deg";
+        hero.style.transition="0.9s";
     }
     else if (curr === init) {
         //nothing
@@ -31,11 +33,15 @@ function calculatePL(init, quant, curr) {
         okay.play();
     }
     else { //loss
-        var loss = (init - curr)*quant ;
-        var lossPercentage = (loss / (init*quant)) * 100
-        showMsg(`Oh No...😟Look like you need to update your portfolio🔻\nLOSS = ${loss} \nLOSS PERCENTAGE = ${lossPercentage.toFixed(2)}%`);
+        var loss = (init - curr) * quant;
+        var lossPercentage = (loss / (init * quant)) * 100
+        showMsg(`Oh No...😟Look like you need to update your portfolio 🔻\nLOSS = ${loss} \nLOSS PERCENTAGE = ${lossPercentage.toFixed(2)}%`);
         losesound.play();
+
+        //if percentage is more than 50
         if (lossPercentage >= 50) {
+            hero.style.rotate="103deg";
+        hero.style.transition="0.9s";
             output.style.background = "red"
             hero.style.animation = "shake 0.3s 10";
             wrong.play();
@@ -47,19 +53,21 @@ function calculatePL(init, quant, curr) {
 
 
 btn.addEventListener('click', function () {
-
-    if(initial.value === "" || quantity.value === "" || current.value === "")
-    {
-        showMsg("Please enter a valid number")
-    }
-    
-    
-    
-    var init = Number(initial.value);
+var init = Number(initial.value);
     var quant = Number(quantity.value);
     var curr = Number(current.value);
+    if (initial.value == "" || quantity.value == "" || current.value == "") {
+        
+        if (init <= "0"|| quant <= 0 || curr <= 0) 
+            {
+            showMsg("Please enter a valid number")
+        }
 
-    calculatePL(init, quant, curr);
+    }
+    else{
+
+       calculatePL(init, quant, curr);
+}
 
 })
 

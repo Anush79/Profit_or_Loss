@@ -3,6 +3,7 @@
     padding: 0;
     margin: 0;
     font-family: 'Orbitron', sans-serif;
+    
 }
 body{
     margin:0px 50px;
@@ -10,12 +11,19 @@ body{
    background: black;
    
    letter-spacing: 0.6px;
+   overflow-y: hidden;
 }
 header{
     margin-top: 20px;
     color:white;
     text-align: center;
     height: 50px;
+}
+h1 .left{
+    border-top:2px solid#4cb74c;
+}
+h1 .right{
+    border-bottom:2px solid rgb(214, 26, 26);
 }
 .container{
     display: flex;
@@ -67,3 +75,24 @@ button{
     90% { transform: translate(1px, 2px) rotate(0deg); }
     100% { transform: translate(1px, -2px) rotate(-1deg); }
   }
+  footer {
+    text-align: center;
+    width: 100%;
+    color: rgb(223, 228, 223);
+    position: fixed;
+    bottom: 18px;
+    left: 0;
+    font-size: x-small;
+    
+}
+
+.social {
+    border-top: 1px solid #4cb74c;
+    display: inline;
+    cursor: pointer;
+}
+.social a{
+    margin: 010px 50px;
+    text-decoration: none;
+    color: antiquewhite;
+}
