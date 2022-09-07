@@ -25,12 +25,18 @@ function calculatePL(init, quant, curr) {
         2
       )}%`
     );
-    profitsound.play();
-    success.play();
+    //if profit percentage is greater than 30%
+    if (percentage >= 30) {
+      output.style.background = "#03903c";
+      success.play();
+    } else {
+      profitsound.play();
+    }
     hero.style.rotate = "297deg";
     hero.style.transition = "0.9s";
-  } else if (curr === init) {
-    //nothing
+  } 
+  else if (curr === init) {
+    //no gain no loss
     showMsg("No Profit No Loss🤨, It's Okay 🙂");
     okay.play();
   } else {

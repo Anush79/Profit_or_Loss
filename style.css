@@ -62,7 +62,7 @@ button{
 .result{
 
     margin: 30px;
-    
+    border-radius: 8px;
     height: 65px;
 }
 
