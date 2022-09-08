@@ -5,6 +5,7 @@ var current = document.querySelector(".current");
 var btn = document.querySelector("button");
 var output = document.querySelector(".result");
 var hero = document.querySelector(".hero");
+var resetbtn = document.querySelector(".reset");
 
 const profitsound = new Audio("sounds/cash.mp3");
 const success = new Audio("sounds/success.mp3");
@@ -73,6 +74,9 @@ btn.addEventListener("click", function () {
     calculatePL(init, quant, curr);
   }
 });
+resetbtn.addEventListener("click",function(){
+  window.location.reload();
+})
 
 //Profit percentage (P%) = (Profit /Cost Price) x 100
 // Loss percentage (L%) = (Loss / Cost price) x 100

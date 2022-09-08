@@ -58,6 +58,11 @@ button{
     border-radius:5px;
     font-weight: 700;
     font-size: x-large;
+    transition: ease-out 1.1s;
+}
+button:hover{
+    box-shadow: inset 0 0 0 50px #4cb74c;
+    color: black;
 }
 .result{
 
@@ -95,4 +100,10 @@ button{
     margin: 010px 50px;
     text-decoration: none;
     color: antiquewhite;
+}
+.reset{
+    position: fixed;
+    transform: scale(0.7);
+    right: 0px;
+    bottom: 40px;
 }
