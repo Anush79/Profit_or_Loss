@@ -5,7 +5,8 @@
  I have included special sound effects and animations on 30% or more profit and 50% or more loss. Kindly use desktop view. Have fun
 
 Screenshot
-![image](https://user-images.githubusercontent.com/66175237/191341092-243bfcfb-4782-4031-8998-36e1cbd9f0d0.png)
+![image](https://user-images.githubusercontent.com/66175237/191342927-58ec917c-951b-4495-b2c7-a227cf96f346.png)
+
 profit
 
 ![image](https://user-images.githubusercontent.com/66175237/191341843-704f2d09-fe9b-4ef6-82d1-981ee0ddaf98.png)
