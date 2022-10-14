@@ -71,7 +71,7 @@ button:hover{
 
     margin: 30px;
     border-radius: 8px;
-    height: 65px;
+    height: auto;
 }
 
 @keyframes shake {
